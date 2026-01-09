@@ -199,20 +199,23 @@ body {
     .team {
         width: 100%;
     }
-
     .team {
-        text-align: center;
+        width: 100%;
+        margin-top: 0;
         padding: 30px 5%;
+        text-align: center;
+    }
+
+    .team h2 {
+        position: static;     /* 🔥 ABSOLUTE KAPAT */
+        transform: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 20px;
     }
 
     .team-grid {
-        gap: -100px;
-    }
-        .team h2 {
-        position: static;
-        transform: none;
-        margin-bottom: 15px;
-        background: none;
-        padding: 0;
+        padding-top: 0;       /* ekstra boşluk yok */
+        grid-template-columns: 1fr;
     }
 }
