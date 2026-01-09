@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #151515;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+}
+
+.logo span {
+    color: #6a1bb1;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-size: 16px;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6a1bb1;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* MAIN BACKGROUND */
+.main-bg {
+    background-image:
+        linear-gradient(rgba(15, 0, 30, 0.85), rgba(15, 0, 30, 0.9)),
+        url("images/esports-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5% 10px; /* ALT BOŞLUK KÜÇÜK */
+}
+
+.hero-text {
+    width: 50%;
+    margin-top: -180px;
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px rgba(106, 27, 177, 0.6);
+}
+
+.hero-text span {
+    color: #6a1bb1;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    color: #ddd;
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 30px;
+    border: none;
+    background: #6a1bb1;
+    color: white;
+    cursor: pointer;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 2px solid #6a1bb1;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    width: 30%;
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+/* TEAM */
+.team {
+    position: relative;
+    padding: 10px 5% 30px;
+    width: 55%;
+    text-align: left;
+
+    margin-top: -100px;   /* ⬆ OUR GAMES YUKARI */
+}
+
+.team h2 {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.6rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    background: rgba(15, 0, 30, 0.85); /* yazı arkası */
+    padding: 8px 18px;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.player-card {
+    background: #1c1c1c;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-bottom: 1px; /* HAFİF DOLULUK */
+}
+
+.player-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.player-card h3 {
+    font-size: 1rem;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px #6a1bb1;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 12px 0;
+    background: #151515;
+    margin-top: -10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image,
+    .team {
+        width: 100%;
+    }
+
+    .team {
+        text-align: center;
+        padding: 30px 5%;
+    }
+
+    .team-grid {
+        gap: -100px;
+    }
+        .team h2 {
+        position: static;
+        transform: none;
+        margin-bottom: 15px;
+        background: none;
+        padding: 0;
+    }
+}
