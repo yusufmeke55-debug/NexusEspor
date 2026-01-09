@@ -189,33 +189,66 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* HERO */
     .hero {
         flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        padding: 40px 5% 20px;
         text-align: center;
     }
 
-    .hero-text,
-    .hero-image,
-    .team {
+    .hero-text {
         width: 100%;
+        transform: none;   /* 🔥 EN KRİTİK SATIR */
     }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* HERO IMAGE */
+    .hero-image {
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    /* OUR GAMES */
     .team {
         width: 100%;
-        margin-top: 0;
-        padding: 30px 5%;
+        margin-top: 20px;
+        padding: 20px 5%;
+        transform: none;   /* 🔥 */
         text-align: center;
     }
 
     .team h2 {
-        position: static;     /* 🔥 ABSOLUTE KAPAT */
+        position: static;  /* 🔥 */
         transform: none;
-        background: none;
-        padding: 0;
         margin-bottom: 20px;
+        background: none;
     }
 
     .team-grid {
-        padding-top: 0;       /* ekstra boşluk yok */
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .player-card img {
+        height: 140px;
     }
 }
